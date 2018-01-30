@@ -29,5 +29,13 @@
     <ClCompile Include="FB3Shell.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="FB3ThumbnailProvider.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="FB3Shell.def">
+      <Filter>Source Files</Filter>
+    </None>
   </ItemGroup>
 </Project>

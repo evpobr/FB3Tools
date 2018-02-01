@@ -36,18 +36,18 @@
 
     <UIRef Id="WixUI_InstallDir" />
 
-    <Condition Message="This application is only supported on Windows Vista, Windows Server 2008, or higher.">
+    <Condition Message="!(loc.WindowsVersionCheckFailed)">
       <![CDATA[Installed OR (VersionNT >= 600)]]>
     </Condition>
 
     <?if $(var.Platform) = x86 ?>
-    <Condition Message="This application requires Windows 32-bit (x86 platform).">
+    <Condition Message="!(loc.CPU32bitCheckFailed)">
       %PROCESSOR_ARCHITECTURE="x86"
     </Condition>
     <?endif?>
 
     <?if $(var.Platform) = x64 ?>
-    <Condition Message="This application requires Windows 64-bit (AMD64 platform).">
+    <Condition Message="!(loc.CPU64bitCheckFailed)">
       %PROCESSOR_ARCHITECTURE="AMD64"
     </Condition>
     <?endif?>
@@ -72,7 +72,7 @@
 		<ComponentGroup Id="FB3ShellComponents" Directory="INSTALLFOLDER">
 			 <Component Id="FB3ShellComponent" Win64="$(var.Win64)">
          <File Id="FB3Shell_dll" Name="$(var.FB3Shell.TargetFileName)" Source="$(var.FB3Shell.TargetPath)" KeyPath="yes" ProcessorArchitecture="x64">
-           <Class Id="0C1CF396-AF95-497D-AED7-AD1D73A1C550" Context="InprocServer32" Description="FB3 shell thumbnail provider" ThreadingModel="apartment"/>
+           <Class Id="0C1CF396-AF95-497D-AED7-AD1D73A1C550" Context="InprocServer32" Description="!(loc.FB3ShellThumbnailProviderDescription)" ThreadingModel="apartment"/>
          </File>
          <ProgId Id="FictionBook.3" Description="FictionBook 3" Icon="FB3Shell_dll">
            <Extension Id="fb3">
@@ -86,7 +86,7 @@
       </Component>
       <Component Id="FB3ShellApprovedRegComponent" Guid="cf32cb36-570c-46b8-85c2-8441913a078d" Win64="$(var.Win64)">
         <RegistryKey Root="HKLM" Key="Software\Microsoft\Windows\CurrentVersion\Shell Extensions\Approved">
-          <RegistryValue Type="string" Name="{0C1CF396-AF95-497D-AED7-AD1D73A1C550}" Value="FB3 shell thumbnail provider"/>
+          <RegistryValue Type="string" Name="{0C1CF396-AF95-497D-AED7-AD1D73A1C550}" Value="!(loc.FB3ShellThumbnailProviderDescription)"/>
         </RegistryKey>
       </Component>
 		</ComponentGroup>

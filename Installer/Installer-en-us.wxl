@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WixLocalization Culture="en-us" xmlns="http://schemas.microsoft.com/wix/2006/localization">
+  <String Id="NewerVesrionInstalled">A newer version of [ProductName] is already installed.</String>
+	<String Id="WindowsVersionCheckFailed">This application is only supported on Windows Vista, Windows Server 2008, or higher.</String>
+  <String Id="CPU32bitCheckFailed">This application requires Windows 32-bit (x86 platform).</String>
+  <String Id="CPU64bitCheckFailed">This application requires Windows 64-bit (AMD64 platform).</String>
+  <String Id="FB3ShellThumbnailProviderDescription">FB3 shell thumbnail provider</String>
+</WixLocalization>

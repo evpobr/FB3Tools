@@ -36,6 +36,22 @@
 
     <UIRef Id="WixUI_InstallDir" />
 
+    <Condition Message="This application is only supported on Windows Vista, Windows Server 2008, or higher.">
+      <![CDATA[Installed OR (VersionNT >= 600)]]>
+    </Condition>
+
+    <?if $(var.Platform) = x86 ?>
+    <Condition Message="This application requires Windows 32-bit (x86 platform).">
+      %PROCESSOR_ARCHITECTURE="x86"
+    </Condition>
+    <?endif?>
+
+    <?if $(var.Platform) = x64 ?>
+    <Condition Message="This application requires Windows 64-bit (AMD64 platform).">
+      %PROCESSOR_ARCHITECTURE="AMD64"
+    </Condition>
+    <?endif?>
+
     <CustomAction Id="NotifyShellAssociationChanged" Return="ignore" Execute="immediate" BinaryKey="WixShellExtension.CA.dll" DllEntry="NotifyShellAssociationChanged" />    
     
     <InstallExecuteSequence>

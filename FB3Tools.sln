@@ -5,6 +5,10 @@ VisualStudioVersion = 15.0.27130.2024
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "FB3Shell", "FB3Shell\FB3Shell.vcxproj", "{5F04F582-122D-4C2B-A047-0BC42A4791F2}"
 EndProject
+Project("{930C7802-8A8C-48F9-8165-68863BCCD9DD}") = "Installer", "Installer\Installer.wixproj", "{CB87C0A7-C1EE-4FC4-94EA-E0E1412A3ED1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WixShellExtension", "WixShellExtension\WixShellExtension.csproj", "{650C5E95-4BF2-4D28-873D-949BC40F673A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -21,6 +25,18 @@ Global
 		{5F04F582-122D-4C2B-A047-0BC42A4791F2}.Release|x64.Build.0 = Release|x64
 		{5F04F582-122D-4C2B-A047-0BC42A4791F2}.Release|x86.ActiveCfg = Release|Win32
 		{5F04F582-122D-4C2B-A047-0BC42A4791F2}.Release|x86.Build.0 = Release|Win32
+		{CB87C0A7-C1EE-4FC4-94EA-E0E1412A3ED1}.Debug|x64.ActiveCfg = Debug|x86
+		{CB87C0A7-C1EE-4FC4-94EA-E0E1412A3ED1}.Debug|x86.ActiveCfg = Debug|x86
+		{CB87C0A7-C1EE-4FC4-94EA-E0E1412A3ED1}.Debug|x86.Build.0 = Debug|x86
+		{CB87C0A7-C1EE-4FC4-94EA-E0E1412A3ED1}.Release|x64.ActiveCfg = Release|x64
+		{CB87C0A7-C1EE-4FC4-94EA-E0E1412A3ED1}.Release|x86.ActiveCfg = Release|x86
+		{CB87C0A7-C1EE-4FC4-94EA-E0E1412A3ED1}.Release|x86.Build.0 = Release|x86
+		{650C5E95-4BF2-4D28-873D-949BC40F673A}.Debug|x64.ActiveCfg = Debug|x86
+		{650C5E95-4BF2-4D28-873D-949BC40F673A}.Debug|x86.ActiveCfg = Debug|x86
+		{650C5E95-4BF2-4D28-873D-949BC40F673A}.Debug|x86.Build.0 = Debug|x86
+		{650C5E95-4BF2-4D28-873D-949BC40F673A}.Release|x64.ActiveCfg = Release|x86
+		{650C5E95-4BF2-4D28-873D-949BC40F673A}.Release|x86.ActiveCfg = Release|x86
+		{650C5E95-4BF2-4D28-873D-949BC40F673A}.Release|x86.Build.0 = Release|x86
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

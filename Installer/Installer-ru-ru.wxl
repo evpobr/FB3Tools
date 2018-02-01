@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WixLocalization Culture="ru-RU" xmlns="http://schemas.microsoft.com/wix/2006/localization">
+  <String Id="NewerVesrionInstalled">Последняя версия [ProductName] уже установлена.</String>
+  <String Id="WindowsVersionCheckFailed">Это приложение поддерживает Windows Vista, Windows Server 2008 или новее.</String>
+  <String Id="CPU32bitCheckFailed">Это приложение предназначено для 32-битной версии Windows (платформа x86).</String>
+  <String Id="CPU64bitCheckFailed">Это приложение предназначено для 64-битной версии Windows (платформа AMD64).</String>
+  <String Id="FB3ShellThumbnailProviderDescription">Провайдер эскизов оболочки для FB3 файлов</String>
+</WixLocalization>

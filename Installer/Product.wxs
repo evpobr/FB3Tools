@@ -28,11 +28,19 @@
 		<Feature Id="FB3ShellFeature" Title="FB3 shell extension" Level="1">
 			<ComponentGroupRef Id="FB3ShellComponents" />
 		</Feature>
+    
+    <Binary Id="WixShellExtension.CA.dll" SourceFile="$(var.WixShellExtension.TargetDir)WixShellExtension.CA.dll" />
 
     <WixVariable Id="WixUILicenseRtf" Value="gpl-3.0.rtf" />
     <Property Id="WIXUI_INSTALLDIR" Value="INSTALLFOLDER" />
 
     <UIRef Id="WixUI_InstallDir" />
+
+    <CustomAction Id="NotifyShellAssociationChanged" Return="ignore" Execute="immediate" BinaryKey="WixShellExtension.CA.dll" DllEntry="NotifyShellAssociationChanged" />    
+    
+    <InstallExecuteSequence>
+      <Custom Action="NotifyShellAssociationChanged" Before="InstallFinalize"  />
+    </InstallExecuteSequence>
     
 	</Product>
 

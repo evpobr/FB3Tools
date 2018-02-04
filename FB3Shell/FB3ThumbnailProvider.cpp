@@ -211,13 +211,13 @@ private:
                         hr = frameDecode->GetPixelFormat(&pixelFormat);
                         if (SUCCEEDED(hr))
                         {
-                            if (pixelFormat != GUID_WICPixelFormat32bppRGBA)
+                            if (pixelFormat != GUID_WICPixelFormat32bppBGRA)
                             {
                                 ComPtr<IWICBitmapSource> source, dest;
                                 source = frameDecode;
                                 if (SUCCEEDED(hr))
                                 {
-                                    hr = WICConvertBitmapSource(GUID_WICPixelFormat32bppRGBA, source.Get(), dest.GetAddressOf());
+                                    hr = WICConvertBitmapSource(GUID_WICPixelFormat32bppBGRA, source.Get(), dest.GetAddressOf());
                                     if (SUCCEEDED(hr))
                                     {
                                         source.Reset();

@@ -181,7 +181,6 @@
     <ResourceCompile Include="FB3Shell.rc" />
   </ItemGroup>
   <ItemGroup>
-    <Image Include="D:\Users\user\Downloads\FB3.ico" />
     <Image Include="res\FB3.ico" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

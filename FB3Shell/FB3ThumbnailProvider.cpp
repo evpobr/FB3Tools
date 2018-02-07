@@ -21,6 +21,9 @@ public:
         if (!pstream)
             return E_INVALIDARG;
 
+        if (m_stream)
+            return HRESULT_FROM_WIN32(ERROR_ALREADY_INITIALIZED);
+
         HRESULT hr = pstream->QueryInterface(IID_PPV_ARGS(&m_stream));
         if (SUCCEEDED(hr))
         {
@@ -30,7 +33,7 @@ public:
             if (SUCCEEDED(hr))
             {
                 ComPtr<IOpcPackage> package;
-                hr = factory->ReadPackageFromStream(pstream, OPC_READ_DEFAULT, package.GetAddressOf());
+                hr = factory->ReadPackageFromStream(m_stream.Get(), OPC_READ_DEFAULT, package.GetAddressOf());
                 if (SUCCEEDED(hr))
                 {
                     ComPtr<IOpcRelationshipSet> relationshipSet;
@@ -178,7 +181,7 @@ public:
     }
 
 private:
-    ComPtr<IStream> m_stream;
+    ComPtr<IStream> m_stream{ nullptr };
     ComPtr<IWICBitmapSource> m_image;
 
     HRESULT LoadImageFromStream(IStream * pstream, IWICBitmapSource ** ppBitmap)

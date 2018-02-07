@@ -50,5 +50,8 @@
     <Image Include="D:\Users\user\Downloads\FB3.ico">
       <Filter>Resource Files</Filter>
     </Image>
+    <Image Include="res\FB3.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
   </ItemGroup>
 </Project>

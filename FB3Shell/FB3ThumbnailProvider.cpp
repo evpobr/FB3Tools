@@ -182,7 +182,7 @@ public:
 
 private:
     ComPtr<IStream> m_stream{ nullptr };
-    ComPtr<IWICBitmapSource> m_image;
+    ComPtr<IWICBitmapSource> m_image { nullptr };
 
     HRESULT LoadImageFromStream(IStream * pstream, IWICBitmapSource ** ppBitmap)
     {

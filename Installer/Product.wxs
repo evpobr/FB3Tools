@@ -4,6 +4,7 @@
 <?define ProductFullVersion = "1.0.0.0" ?>
 <?define ProductAuthor = "evpobr" ?>
 <?define ProductAppFolder = "FB3Tools" ?>
+<?define ProductHelpLink = "https://github.com/evpobr/FB3Tools" ?>
 
 <?if $(var.Platform) = x64 ?>
 <?define ProductDisplayName = "$(var.ProductName) 64-bit" ?>
@@ -30,9 +31,11 @@
     </Feature>
 
     <Binary Id="WixShellExtension.CA.dll" SourceFile="$(var.WixShellExtension.TargetDir)WixShellExtension.CA.dll" />
-
+    <Icon Id="FB3Shell.ico" SourceFile="$(var.SolutionDir)FB3Shell\res\FB3.ico"/>
     <WixVariable Id="WixUILicenseRtf" Value="gpl-3.0.rtf" />
     <Property Id="WIXUI_INSTALLDIR" Value="INSTALLFOLDER" />
+    <Property Id="ARPPRODUCTICON" Value="FB3Shell.ico" />
+    <Property Id="ARPHELPLINK" Value="$(var.ProductHelpLink)" />
 
     <UIRef Id="WixUI_InstallDir" />
 

@@ -1,3 +1,10 @@
+; FB3Shell.def : Declares the module parameters.
+
+LIBRARY
+
 EXPORTS
-    DllGetClassObject   PRIVATE
-    DllCanUnloadNow     PRIVATE
+	DllCanUnloadNow		PRIVATE
+	DllGetClassObject	PRIVATE
+	DllRegisterServer	PRIVATE
+	DllUnregisterServer	PRIVATE
+	DllInstall		PRIVATE

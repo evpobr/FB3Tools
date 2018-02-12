@@ -1,0 +1,21 @@
+import "oaidl.idl";
+import "ocidl.idl";
+import "propsys.idl";
+import "thumbcache.idl";
+
+[
+    uuid(D8BC01C5-7E0A-4C68-9DDB-7AF4F41E4F74),
+    version(1.0),
+]
+library FB3Shell
+{
+    importlib("stdole2.tlb");
+    [
+        uuid(0C1CF396-AF95-497D-AED7-AD1D73A1C550)
+    ]
+    coclass FB3ThumbnailProvider
+    {
+        [default] interface IThumbnailProvider;
+        interface IInitializeWithStream;
+    };
+};
